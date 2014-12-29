@@ -1,0 +1,12 @@
+@main("WebSocket Server Test -- Play Framework") {
+  	<h1>WebSocket Echo-Server mit dem Play Framework</h1>
+    <script>
+        var ws = new WebSocket ('ws://'+window.location.host+'/ws');
+        ws.onmessage = function(event) {
+        		console.log(event.data);
+      	}  	
+        ws.onopen = function(event) {
+  	    	  ws.send('Hallo');
+  	    }
+  	</script>
+}
